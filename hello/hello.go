@@ -12,7 +12,7 @@ func init() {
 }
 
 func main() {
-	message, error := greetings.Hello("")
+	message, error := greetings.Hello("Sardor")
 	if error != nil {
 		log.Fatal(error)
 	}
