@@ -6,10 +6,12 @@ import (
 	"log"
 )
 
-func main() {
+func init() {
 	log.SetPrefix("error happened: ")
 	log.SetFlags(0)
+}
 
+func main() {
 	message, error := greetings.Hello("")
 	if error != nil {
 		log.Fatal(error)
