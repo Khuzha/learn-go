@@ -12,10 +12,11 @@ func init() {
 }
 
 func main() {
-	message, error := greetings.Hello("Sardor")
-	if error != nil {
-		log.Fatal(error)
+	names := []string{"Sardor", "Khuzha", "Sardorkhuja"}
+	messages, err := greetings.Hellos(names)
+	if err != nil {
+		log.Fatal(err)
 	}
 
-	fmt.Println(message)
+	fmt.Println(messages)
 }
